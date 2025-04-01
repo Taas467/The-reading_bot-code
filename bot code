@@ -1,4 +1,3 @@
-```python=
 import discord
 from gtts import gTTS
 import os
@@ -27,7 +26,7 @@ async def send_code(ctx,num:int,code:str):
     spelled_out=spelled_out.replace(".","dot").replace("\"","quotes").replace("\'","apostrophe").replace("\\","Back Slash").replace("/","Slash")
     spelled_out=spelled_out.replace(":","colon").replace(";","semicolon").replace("~","tilde").replace("@","at")
     spelled_out=spelled_out.replace("(","parentheses").replace("{","braces").replace("[","brackets")
-
+    
     tts = gTTS(text=spelled_out, lang="en")  # 轉換文字為語音 (英文)
     tts.save(f"code{num}.mp3")  # 存成 MP3 檔案
     spelled_out=""
@@ -45,4 +44,3 @@ async def send_code(ctx,num:int,code:str):
 # 啟動機器人
 token="I_WON'T_TELL_U_THIS!_BRO"
 bot.run(token)
-```
